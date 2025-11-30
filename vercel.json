@@ -1,5 +1,12 @@
 {
-  "buildCommand": "next build",
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build",
   "outputDirectory": ".next",
-  "framework": "nextjs"
+  "installCommand": "npm install --legacy-peer-deps",
+  "framework": "nextjs",
+  "build": {
+    "env": {
+      "NEXT_PRIVATE_SKIP_ROUTES_MANIFEST": "true"
+    }
+  }
 }
